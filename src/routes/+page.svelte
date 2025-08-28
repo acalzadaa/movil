@@ -1,4 +1,21 @@
 <script>
+	import ConfirmAttendanceModal from '$lib/components/modal/ConfirmAttendanceModal.svelte';
+	import { triggerOnEnterOrSpace } from '$lib/utils/accessibility';
+
+	let showConfirmAttendanceModal = $state(false);
+
+	function handleHideConfirmAttendanceModal() {
+		showConfirmAttendanceModal = false;
+	}
+
+	async function handleConfirmAttendanceAction() {
+		handleHideConfirmAttendanceModal();
+	}
+
+	function handleConfirmAttendanceClick() {
+		showConfirmAttendanceModal = true;
+	}
+
 </script>
 
 <svelte:head>
@@ -14,21 +31,36 @@
 		<h2>Registrar asistencias</h2>
 	</div>
 	<div class="container-asistencias">
-		<div class="asistencia-card">
+		<div
+			class="asistencia-card"
+			aria-hidden="true"
+			onclick={handleConfirmAttendanceClick}
+			onkeydown={(e) => triggerOnEnterOrSpace(e, handleConfirmAttendanceClick)}
+		>
 			<strong class="class-name">Taller Practico de Cirugia</strong>
 			<div class="class-details">
 				<p class="class-location">Hospital General de la Zona Norte</p>
 				<p class="class-time">11:00 - 12:00</p>
 			</div>
 		</div>
-		<div class="asistencia-card">
+		<div
+			class="asistencia-card"
+			aria-hidden="true"
+			onclick={handleConfirmAttendanceClick}
+			onkeydown={(e) => triggerOnEnterOrSpace(e, handleConfirmAttendanceClick)}
+		>
 			<strong class="class-name">Taller Practico de Cirugia</strong>
 			<div class="class-details">
 				<p class="class-location">Hospital General de la Zona Norte</p>
 				<p class="class-time">11:00 - 12:00</p>
 			</div>
 		</div>
-		<div class="asistencia-card">
+		<div
+			class="asistencia-card"
+			aria-hidden="true"
+			onclick={handleConfirmAttendanceClick}
+			onkeydown={(e) => triggerOnEnterOrSpace(e, handleConfirmAttendanceClick)}
+		>
 			<strong class="class-name">Taller Practico de Cirugia</strong>
 			<div class="class-details">
 				<p class="class-location">Hospital General de la Zona Norte</p>
@@ -36,6 +68,13 @@
 			</div>
 		</div>
 	</div>
+</section>
+<section class="modals">
+	<ConfirmAttendanceModal
+		showModal={showConfirmAttendanceModal}
+		handleHideModal={handleHideConfirmAttendanceModal}
+		handleAction={handleConfirmAttendanceAction}
+	/>
 </section>
 
 <style>
