@@ -1,9 +1,9 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 
-	export const prerender = true; // Prerender all pages
-	export const ssr = false; // Disable SSR
-	export const csr = true; // Enable client-side rendering
+	export const prerender = true;
+	export const ssr = false;
+	export const csr = true;
 	
 	let { children } = $props();
 </script>
