@@ -1,6 +1,4 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
-
 	export const prerender = true;
 	export const ssr = false;
 	export const csr = true;
@@ -9,7 +7,8 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<title>Registro de asistencias</title>
+	<meta name="Registro de asistencias" content="herramientas de apoyo para el estudiante" />
 </svelte:head>
 
 {@render children?.()}

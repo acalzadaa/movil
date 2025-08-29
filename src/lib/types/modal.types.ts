@@ -3,7 +3,7 @@ import type { Snippet } from "svelte";
 	export interface ModalProps {
 		//header data (basic)
 		showModal: boolean;
-		showCancel: boolean;
+		showCancel?: boolean;
 
 		//presentacion data (basic)
 		primaryColor?: string;
