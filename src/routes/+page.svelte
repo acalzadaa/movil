@@ -18,8 +18,6 @@
 
 </script>
 
-
-
 <section class="container">
 	<div class="header">
 		<h1>Hola, Usuario</h1>
