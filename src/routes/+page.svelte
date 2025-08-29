@@ -18,10 +18,7 @@
 
 </script>
 
-<svelte:head>
-	<title>Registro de asistencias</title>
-	<meta name="Registro de asistencias" content="herramientas de apoyo para el estudiante" />
-</svelte:head>
+
 
 <section class="container">
 	<div class="header">
