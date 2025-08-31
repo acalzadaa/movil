@@ -24,6 +24,9 @@ importers:
       '@capacitor/assets':
         specifier: ^3.0.5
         version: 3.0.5(@types/node@22.18.0)(typescript@5.9.2)
+      '@capacitor/geolocation':
+        specifier: ^7.1.5
+        version: 7.1.5(@capacitor/core@7.4.3)
       '@chromatic-com/storybook':
         specifier: ^4.1.1
         version: 4.1.1(storybook@9.1.3(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.3(@types/node@22.18.0)))
@@ -155,10 +158,18 @@ packages:
   '@capacitor/core@7.4.3':
     resolution: {integrity: sha512-wCWr8fQ9Wxn0466vPg7nMn0tivbNVjNy1yL4GvDSIZuZx7UpU2HeVGNe9QjN/quEd+YLRFeKEBLBw619VqUiNg==}
 
+  '@capacitor/geolocation@7.1.5':
+    resolution: {integrity: sha512-ndfFI4Hd1JF3aYcehtM+PHlP+PqTQZOVzxKupbMqzocDEwF1SCkr2gcO8yZ0NeFvyVdw1jRjOpHXZZUNQRV2sA==}
+    peerDependencies:
+      '@capacitor/core': '>=7.0.0'
+
   '@capacitor/ios@7.4.3':
     resolution: {integrity: sha512-VNm7cHODgh3KK/4ZC2rXU9gBlvHii/mYFLI+XMXwq24nhB679QxHhz+pUuI7PatYoM2q4MAL0NR/dRgehKCaSA==}
     peerDependencies:
       '@capacitor/core': ^7.4.0
+
+  '@capacitor/synapse@1.0.4':
+    resolution: {integrity: sha512-/C1FUo8/OkKuAT4nCIu/34ny9siNHr9qtFezu4kxm6GY1wNFxrCFWjfYx5C1tUhVGz3fxBABegupkpjXvjCHrw==}
 
   '@chromatic-com/storybook@4.1.1':
     resolution: {integrity: sha512-+Ib4cHtEjKl/Do+4LyU0U1FhLPbIU2Q/zgbOKHBCV+dTC4T3/vGzPqiGsgkdnZyTsK/zXg96LMPSPC4jjOiapg==}
@@ -3271,9 +3282,16 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  '@capacitor/geolocation@7.1.5(@capacitor/core@7.4.3)':
+    dependencies:
+      '@capacitor/core': 7.4.3
+      '@capacitor/synapse': 1.0.4
+
   '@capacitor/ios@7.4.3(@capacitor/core@7.4.3)':
     dependencies:
       '@capacitor/core': 7.4.3
+
+  '@capacitor/synapse@1.0.4': {}
 
   '@chromatic-com/storybook@4.1.1(storybook@9.1.3(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.3(@types/node@22.18.0)))':
     dependencies:

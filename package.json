@@ -19,6 +19,7 @@
 	},
 	"devDependencies": {
 		"@capacitor/assets": "^3.0.5",
+		"@capacitor/geolocation": "^7.1.5",
 		"@chromatic-com/storybook": "^4.1.1",
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
